@@ -25,10 +25,9 @@ class SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return WillPopScope(
-        onWillPop: () async {
+    return PopScope(
+        onPopInvoked: (bool state) {
           Navigator.pop<SettingParams>(context, params);
-          return true;
         },
         child: Scaffold(
           appBar: AppBar(title: const Text('设置')),
