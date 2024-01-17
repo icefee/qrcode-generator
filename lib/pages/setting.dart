@@ -26,7 +26,11 @@ class SettingState extends State<Setting> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return PopScope(
-        onPopInvoked: (bool state) {
+        canPop: false,
+        onPopInvoked: (bool didPop) {
+          if (didPop) {
+            return;
+          }
           Navigator.pop<SettingParams>(context, params);
         },
         child: Scaffold(

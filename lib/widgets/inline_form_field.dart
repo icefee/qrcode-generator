@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import './paper.dart';
 
 class InlineFormField extends StatelessWidget {
-  const InlineFormField({
-    super.key,
-    required this.title,
-    required this.formWidget
-  });
+  const InlineFormField({super.key, required this.title, required this.formWidget});
 
   final String title;
   final Widget formWidget;
@@ -19,10 +15,7 @@ class InlineFormField extends StatelessWidget {
       disableBottomMargin: true,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(title, style: const TextStyle(fontSize: 18)),
-          formWidget
-        ],
+        children: [Text(title, style: const TextStyle(fontSize: 18)), formWidget],
       ),
     );
   }
