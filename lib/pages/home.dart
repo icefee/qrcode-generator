@@ -98,7 +98,7 @@ class HomeState extends State<Home> {
                           gapless: settingParams.gapLess,
                           size: 200.0,
                         )
-                      : const Text('输入文本生成二维码')),
+                      : const Text('输入文本生成二维码', style: TextStyle(fontSize: 18, color: Colors.grey))),
             ),
           )
         ],
